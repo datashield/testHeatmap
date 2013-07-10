@@ -1,0 +1,12 @@
+Package: testHeatmap
+Maintainer: <datashield@obiba.org>
+Author: <datashield@obiba.org>
+Version: 1.0
+License: GPL-3
+Title: Heatmap plot for merged datasets (client)
+Description: Heatmap plot for merged datasets (client)
+Depends:
+  opal,
+  fields
+Collate:
+    'datashield.heatmap.plot.combine.r'
