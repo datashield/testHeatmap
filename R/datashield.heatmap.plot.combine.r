@@ -44,17 +44,17 @@ datashield.heatmap.plot.combine <- function(opals, xvect, yvect)
   numcol<-base::dim(grid.density.obj[[1]])[2]
   
   Global.grid.density = base::matrix(0, base::dim(grid.density.obj[[1]])[1], numcol-2)
-#   for (i in 1:num.sources){
-#     Global.grid.density = Global.grid.density + grid.density.obj[[i]][,1:(numcol-2)]
-#   }
-#   
-#   par(mfrow=c(1,1))
-#   
-#   x<-grid.density.obj[[1]][,(numcol-1)]
-#   y<-grid.density.obj[[1]][,(numcol)]
-#   z<-Global.grid.density
-#   
-# #   library('fields')
-#   fields::image.plot(x,y,z, col=heat.colors(50))
-#   
+  for (i in 1:num.sources){
+    Global.grid.density = Global.grid.density + grid.density.obj[[i]][,1:(numcol-2)]
+  }
+  
+  par(mfrow=c(1,1))
+  
+  x<-grid.density.obj[[1]][,(numcol-1)]
+  y<-grid.density.obj[[1]][,(numcol)]
+  z<-Global.grid.density
+  
+#   library('fields')
+  fields::image.plot(x,y,z, col=heat.colors(50))
+  
 }
