@@ -2,6 +2,7 @@
 #'
 #' @param xvect a numerical vector
 #' @param yvect a numerical vector
+#' @return a heatmap plot
 #' @export
 #' 
 datashield.heatmap.plot.combine <- function(opals, xvect, yvect){
@@ -35,8 +36,7 @@ datashield.heatmap.plot.combine <- function(opals, xvect, yvect){
   cally <- call("grid.density.limits", xvect, yvect, x.global.min, x.global.max, y.global.min, y.global.max) 
   grid.density.obj <- datashield.aggregate(opals, cally)
   
-  base:return(grid.density.obj)
-#   num.sources <- base::length(grid.density.obj)
+  num.sources <- base::length(grid.density.obj)
 #   
 #   numcol<-base::dim(grid.density.obj[[1]])[2]
 #   
