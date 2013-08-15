@@ -4,7 +4,7 @@
 #' @param yvect a numerical vector
 #' @export
 #' 
-datashield.heatmap.plot.combine = function(opals, xvect, yvect){
+datashield.heatmap.plot.combine <- function(opals, xvect, yvect){
   
   # define the min and max of the variables across all datasets
   cally <- call("MinMax", xvect, yvect) 
@@ -31,15 +31,16 @@ datashield.heatmap.plot.combine = function(opals, xvect, yvect){
   
   
   
-#   # generate the grid density object to plot
-#   cally <- call("grid.density.combine", xvect, yvect, x.global.min, x.global.max, y.global.min, y.global.max) 
-#   grid.density.obj <- datashield.aggregate(opals, cally)
+  # generate the grid density object to plot
+  cally <- call("grid.density.limits", xvect, yvect, x.global.min, x.global.max, y.global.min, y.global.max) 
+  grid.density.obj <- datashield.aggregate(opals, cally)
+  
+  base:return(grid.density.obj)
+#   num.sources <- base::length(grid.density.obj)
 #   
-#   num.sources <- length(grid.density.obj)
+#   numcol<-base::dim(grid.density.obj[[1]])[2]
 #   
-#   numcol<-dim(grid.density.obj[[1]])[2]
-#   
-#   Global.grid.density = matrix(0, dim(grid.density.obj[[1]])[1], numcol-2)
+#   Global.grid.density = base::matrix(0, base::dim(grid.density.obj[[1]])[1], numcol-2)
 #   for (i in 1:num.sources){
 #     Global.grid.density = Global.grid.density + grid.density.obj[[i]][,1:(numcol-2)]
 #   }
@@ -50,7 +51,7 @@ datashield.heatmap.plot.combine = function(opals, xvect, yvect){
 #   y<-grid.density.obj[[1]][,(numcol)]
 #   z<-Global.grid.density
 #   
-#   library('fields')
-#   image.plot(x,y,z, col=heat.colors(50))
-  
+# #   library('fields')
+#   fields::image.plot(x,y,z, col=heat.colors(50))
+#   
 }
