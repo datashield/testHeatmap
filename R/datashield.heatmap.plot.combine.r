@@ -37,10 +37,10 @@ datashield.heatmap.plot.combine <- function(opals, xvect, yvect){
   grid.density.obj <- datashield.aggregate(opals, cally)
   
   num.sources <- base::length(grid.density.obj)
-#   
-#   numcol<-base::dim(grid.density.obj[[1]])[2]
-#   
-#   Global.grid.density = base::matrix(0, base::dim(grid.density.obj[[1]])[1], numcol-2)
+  
+  numcol<-base::dim(grid.density.obj[[1]])[2]
+  
+  Global.grid.density = base::matrix(0, base::dim(grid.density.obj[[1]])[1], numcol-2)
 #   for (i in 1:num.sources){
 #     Global.grid.density = Global.grid.density + grid.density.obj[[i]][,1:(numcol-2)]
 #   }

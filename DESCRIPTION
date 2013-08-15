@@ -6,7 +6,7 @@ License: GPL-3
 Title: Heatmap plot for merged datasets (client)
 Description: Heatmap plot for merged datasets (client)
 Depends:
-  opal,
-  fields
+    opal,
+    fields
 Collate:
     'datashield.heatmap.plot.combine.r'
