@@ -1,11 +1,14 @@
 #' Generates a heatmap plot for merged datasets
 #'
+#' @param opals character strings that represent the URL of the servers where 
+#' the study datasets are stored.
 #' @param xvect a numerical vector
 #' @param yvect a numerical vector
 #' @return a heatmap plot
 #' @export
 #' 
-datashield.heatmap.plot.combine <- function(opals, xvect, yvect){
+datashield.heatmap.plot.combine <- function(opals, xvect, yvect)
+{
   
   # define the min and max of the variables across all datasets
   cally <- call("MinMax", xvect, yvect) 
